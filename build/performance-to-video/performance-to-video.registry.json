@@ -1,0 +1,24 @@
+{
+  "namespace": "PerformanceToVideo",
+  "fsNamespace": "performance-to-video",
+  "loader": "../performance-to-video.js",
+  "core": "performance-to-video.u3t7nnbl.js",
+  "corePolyfilled": "performance-to-video.xtzeldzg.js",
+  "components": {
+    "p2v-load-profile": {
+      "$": "mzx2zlts"
+    },
+    "p2v-progress": {
+      "$": "mzx2zlts"
+    },
+    "p2v-record": {
+      "$": "mzx2zlts"
+    },
+    "p2v-settings": {
+      "$": "mzx2zlts"
+    },
+    "performance-to-video": {
+      "$": "mzx2zlts"
+    }
+  }
+}
