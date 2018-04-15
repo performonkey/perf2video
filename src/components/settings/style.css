@@ -1,0 +1,11 @@
+.setting-field {
+  margin-bottom: 10px;
+}
+
+.setting-field:last-child {
+  margin-bottom: 0;
+}
+
+.setting-name {
+  font-size: 14px;
+}

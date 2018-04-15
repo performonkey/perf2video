@@ -23,31 +23,155 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import {
+  Screenshot,
+} from './components/load-profile';
+import {
+  Settings,
+} from './components/settings';
+import {
+  Settings as Settings2,
+} from './components/settings/index';
 
 declare global {
-  interface HTMLMyComponentElement extends HTMLStencilElement {
-    'first': string;
-    'last': string;
+  interface HTMLP2vLoadProfileElement extends HTMLStencilElement {
+    'onLoadProfile': (screenshots: CustomEvent) => void;
   }
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLP2vLoadProfileElement: {
+    prototype: HTMLP2vLoadProfileElement;
+    new (): HTMLP2vLoadProfileElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'p2v-load-profile': HTMLP2vLoadProfileElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'p2v-load-profile': HTMLP2vLoadProfileElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'p2v-load-profile': JSXElements.P2vLoadProfileAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface P2vLoadProfileAttributes extends HTMLAttributes {
+      'onLoadProfile'?: (screenshots: CustomEvent) => void;
+      'onP2vLoadProfileFailed'?: (event: CustomEvent) => void;
+      'onP2vProgressUpdate'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLPerformanceToVideoElement extends HTMLStencilElement {
+
+  }
+  var HTMLPerformanceToVideoElement: {
+    prototype: HTMLPerformanceToVideoElement;
+    new (): HTMLPerformanceToVideoElement;
+  };
+  interface HTMLElementTagNameMap {
+    'performance-to-video': HTMLPerformanceToVideoElement;
+  }
+  interface ElementTagNameMap {
+    'performance-to-video': HTMLPerformanceToVideoElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'performance-to-video': JSXElements.PerformanceToVideoAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PerformanceToVideoAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLP2vProgressElement extends HTMLStencilElement {
+    'message': string;
+    'title': string;
+  }
+  var HTMLP2vProgressElement: {
+    prototype: HTMLP2vProgressElement;
+    new (): HTMLP2vProgressElement;
+  };
+  interface HTMLElementTagNameMap {
+    'p2v-progress': HTMLP2vProgressElement;
+  }
+  interface ElementTagNameMap {
+    'p2v-progress': HTMLP2vProgressElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'p2v-progress': JSXElements.P2vProgressAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface P2vProgressAttributes extends HTMLAttributes {
+      'message'?: string;
+      'onOnCloseProgress'?: (event: CustomEvent) => void;
+      'title'?: string;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLP2vRecordElement extends HTMLStencilElement {
+    'screenshots': Array<Screenshot>;
+    'settings': Settings;
+  }
+  var HTMLP2vRecordElement: {
+    prototype: HTMLP2vRecordElement;
+    new (): HTMLP2vRecordElement;
+  };
+  interface HTMLElementTagNameMap {
+    'p2v-record': HTMLP2vRecordElement;
+  }
+  interface ElementTagNameMap {
+    'p2v-record': HTMLP2vRecordElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'p2v-record': JSXElements.P2vRecordAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface P2vRecordAttributes extends HTMLAttributes {
+      'onP2vProgressUpdate'?: (event: CustomEvent) => void;
+      'screenshots'?: Array<Screenshot>;
+      'settings'?: Settings;
+    }
+  }
+}
+
+
+declare global {
+  interface HTMLP2vSettingsElement extends HTMLStencilElement {
+    'settings': Settings;
+  }
+  var HTMLP2vSettingsElement: {
+    prototype: HTMLP2vSettingsElement;
+    new (): HTMLP2vSettingsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'p2v-settings': HTMLP2vSettingsElement;
+  }
+  interface ElementTagNameMap {
+    'p2v-settings': HTMLP2vSettingsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'p2v-settings': JSXElements.P2vSettingsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface P2vSettingsAttributes extends HTMLAttributes {
+      'onP2vSettingsUpdate'?: (event: CustomEvent) => void;
+      'settings'?: Settings;
     }
   }
 }
