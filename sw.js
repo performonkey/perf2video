@@ -27,7 +27,7 @@ self.__precacheManifest = [
   },
   {
     "url": "build/performance-to-video.js",
-    "revision": "f6df90c4048e169922593597ee564056"
+    "revision": "b219294ff74c4615251c8b84aff7b542"
   },
   {
     "url": "build/performance-to-video/mzx2zlts.es5.js",
